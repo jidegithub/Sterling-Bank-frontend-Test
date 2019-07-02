@@ -23,35 +23,4 @@ const PaymentList = (props) =>{
     )  
 }
   
-
-    
-
-
-
-
-
-
-
-
-// const PaymentList = () => {
-//     const [paymentArray, setPaymentArray ] = useState({
-//         payments:[]
-//     });
-
-
-//   useEffect(() => {
-//     axios.get(`http://localhost:3000/payments`).then(payment=>{
-//         setPaymentArray({
-//             payments: payment.data
-//         });
-//     });
-//   }, [])
-
-//   return (
-//     <div>
-//         hello
-//     </div>
-//     );
-// }
-
 export default PaymentList;

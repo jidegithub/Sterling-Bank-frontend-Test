@@ -8,9 +8,12 @@ import styled from 'styled-components';
 import './App.scss';
 
 class App extends Component {
-  state = {
-    payments:[],
-    value:0
+  constructor(props) {
+    super(props);
+    this.state ={
+      payments:[],
+      value:0,
+    };
   }
 
   componentDidMount(){
@@ -20,13 +23,18 @@ class App extends Component {
     });
   }
   
+  
  
-  onSlideRender (event) {
-    this.setState({value: parseInt(event.target.value)})
+  onSlideRender = (event) => {
+    this.setState({ value: event.target.value })
   }
 
   render() {
-    
+    const  filteredPayment = this.state.payments.filter(money=>{
+      return parseInt(money.amount.value) > 0 && parseInt(money.amount.value) <= this.state.value
+     })
+     //console.log(filteredPayment)
+
     return (
       <Fragment>
         <div>
@@ -35,7 +43,7 @@ class App extends Component {
           </header>
           <div>
             <NewComment />
-            <PaymentList payment={this.state.payments}/>
+            <PaymentList payment={filteredPayment}/>
             <Cards />
           </div>
         </div>

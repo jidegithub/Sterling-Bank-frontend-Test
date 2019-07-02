@@ -12,7 +12,7 @@ const Card = (props) => {
                         </div>
                     </div>
                     
-                    <input type='checkbox'/>show email 
+                    <input type='checkbox'/>
                     <div className='card-comment'></div>
                     <div className='flex space-around'>
                         <p className='card-merchant'>{props.merchant}</p>

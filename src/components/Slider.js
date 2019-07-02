@@ -1,24 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-class Slider extends Component {
-
-    state = {
-        value: 0
-      }
-    
-      
-
-    
-    render() {
-        return (
-            <Styles>
-                <input type="range" min={0} max={3993} className="slider" onChange={this.props.slideRender} />
-                <div className="value">val</div>
-            </Styles>
-        );
-    }
+const Slider =({value, slideRender}) => {
+    return (
+        <Styles>
+            <input type="range" min={0} max={3993} className="slider" onChange={slideRender} />
+            <div className="value">{value}</div>
+        </Styles>
+    );
 }
+
 
 export default Slider;
 
@@ -60,11 +51,6 @@ const Styles = styled.div`
             appearance: none;
             ${props => sliderThumbStyles(props)}
           }
-      
-          &::-moz-range-thumb {
-            ${props => sliderThumbStyles(props)}
-          }
-    
     }
-`;
+`
 
