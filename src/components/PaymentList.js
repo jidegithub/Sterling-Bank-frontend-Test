@@ -1,5 +1,5 @@
 import React, { Fragment} from 'react';
-import Cards from './Cards'
+import Cards from './Cards';
 
 
 const PaymentList = (props) =>{

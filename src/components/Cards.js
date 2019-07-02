@@ -20,8 +20,7 @@ const Card = (props) => {
                     </div>
                     <div className='card-image'></div>
                 </div>  
-        </Fragment>
-       
+        </Fragment>  
     );
 }
 
