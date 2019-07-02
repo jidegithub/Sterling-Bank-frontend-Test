@@ -1,13 +1,4 @@
 import React, { Fragment } from 'react';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faCode, faHighlighter } from '@fortawesome/free-regular-svg-icons';
-
-// library.add(
-//     faMoneyBill,
-//     faCode,
-//     faHighlighter
-//     // more icons go h
-//   );
 
 const Card = (props) => {
     return (

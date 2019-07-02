@@ -7,18 +7,14 @@ class Slider extends Component {
         value: 0
       }
     
-      handleOnChange = (e) => {
-        const { value } = e.target;
-        this.setState({ value });
-        console.log(value)
-      }
+      
 
     
     render() {
         return (
             <Styles>
-                <input type="range" min={0} max={255} value={this.state.value} className="slider" onChange={this.props.slideRender} onChange={this.handleOnChange}/>
-                <div className="value">{this.state.value}</div>
+                <input type="range" min={0} max={3993} className="slider" onChange={this.props.slideRender} />
+                <div className="value">val</div>
             </Styles>
         );
     }

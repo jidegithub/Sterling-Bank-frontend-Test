@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Slider from './components/Slider'
-import NewPayment from './components/NewPayment'
+import NewComment from './components/NewComment'
 import PaymentList from './components/PaymentList'
 import Cards from './components/Cards'
 import styled from 'styled-components';
@@ -10,22 +10,23 @@ import './App.scss';
 class App extends Component {
   state = {
     payments:[],
-    value:{} 
+    value:0
   }
 
-  onSlideRender = (event)=>{
-    console.log(event)
+  componentDidMount(){
+    axios.get(`http://localhost:3000/payments?limit=168`).then(payment=>{
+        // console.log((payment.data.payments))
+    this.setState({payments: payment.data.payments});
+    });
   }
   
-  componentDidMount(){
-    axios.get('http://localhost:3000/payments?limit=168').then(res=>{
-        this.setState({payments:res.data})
-        console.log(this.state.node)
-      }) 
-  
+ 
+  onSlideRender (event) {
+    this.setState({value: parseInt(event.target.value)})
   }
 
   render() {
+    
     return (
       <Fragment>
         <div>
@@ -33,8 +34,8 @@ class App extends Component {
             <Slider slideRender={this.onSlideRender}/>
           </header>
           <div>
-            <NewPayment />
-            <PaymentList />
+            <NewComment />
+            <PaymentList payment={this.state.payments}/>
             <Cards />
           </div>
         </div>
