@@ -17,7 +17,7 @@ const PaymentList = (props) =>{
                         lastName={payments.user.last}
                         email={payments.user.email}
                     />
-                })};     
+                })}    
             </div>
         </Fragment>
     )  

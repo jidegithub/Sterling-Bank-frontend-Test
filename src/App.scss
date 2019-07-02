@@ -5,6 +5,7 @@
 
 body{
   background-color:rgb(230, 241, 243);
+  padding:20px;
   
 }
 .App {
@@ -23,46 +24,6 @@ body{
   color: white;
 }
 
-/* FORM STYLES */
-.contact{
-    & form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:20px;
-  }
-  & form label{
-  display:block;
-  }
-  & form p{
-    margin:0;
-  }
-  & form .full{
-    grid-column: 1 / 3;
-  }
-  & form button,& form input,& form textarea{
-    width:100%;
-    padding:1em;
-    border:1px solid #c9e6ff;
-  }
-  & form button{
-    background:#c9e6ff;
-    border:0;
-    text-transform: uppercase;
-  }
-  & form button:hover, & form button:focus{
-    background:#92bde7;
-    color:#fff;
-    outline:0;
-    transition: background-color 2s ease-out;
-  }
-  & form button:hover,& form button:focus{
-  background:#92bde7;
-  color:#fff;
-  outline:0;
-  transition: background-color 2s ease-out;
-  }
-} 
-
 .alert{
   text-align: center;
   padding:10px;
@@ -74,8 +35,8 @@ body{
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows:repeat(3, 150px);
   grid-gap: 12px;
-
 }
 
 //CARD STYLES
@@ -109,7 +70,12 @@ body{
   color:rgb(23, 148, 216);                
   }
   &-comment{
-
+    position:relative;
+  }
+  &-button{
+    position:absolute;
+    right:2px;
+    bottom:-70px;
   }
   &-merchant{
     font-size: 20px;
