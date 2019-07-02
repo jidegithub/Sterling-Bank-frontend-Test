@@ -1,32 +1,8 @@
-import React, { useState } from 'react';
-
-
-const Comment = () => {
-
-    
-
-toggle = () =>{
-
-}    
-    return (
-        <div>
-            <form style={{display: 'none'}} >
-                <textarea></textarea>
-            </form>
-            <button > Add comment</button>
-        </div>
-    );
-}
-
-export default Comment;
-
-
-
-
 import React, { Component } from 'react';
+// import List from './List'
 
-class something extends Component {
-    state:{
+class Comment extends Component {
+    state = {
         on:false,
     }
 
@@ -39,14 +15,14 @@ class something extends Component {
     render() {
         return (
             <div>
-                {this.state.on && (<h1>toggle me </h1>)}
+                {this.state.on && (<h5>toggle me </h5>)}
               <button onClick={this.toggle}>show/hide</button>  
             </div>
         );
     }
 }
 
-export default something;
+export default Comment;
 
 
 
@@ -194,30 +170,3 @@ export default something;
 //     document.getElementById('app')
 //   );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const Comment = () => {
-//     return (
-//         <div>
-//             <form>
-//                 <textarea>
-
-//                 </textarea>
-//             </form>
-//         </div>
-//     );
-// }
-
-// export default Comment;

@@ -3,8 +3,12 @@ import axios from 'axios';
 import Slider from './components/Slider'
 import PaymentList from './components/PaymentList'
 import Cards from './components/Cards'
-import ImageUpload from './components/ImageUpload'
-import Comment from './components/Comment'
+import List from './components/List'
+import 'jquery/src/jquery';
+import 'popper.js/dist/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+// Styles
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
 class App extends Component {
@@ -30,8 +34,6 @@ class App extends Component {
     });
   }
 
- 
-
   
   removeImage = id => {
     this.setState({
@@ -48,11 +50,12 @@ class App extends Component {
       <Fragment>
         <div>
           <header className="App-header">
-            <Slider slideRender={this.onSlideRender}/>
+            <Slider slideRender={this.onSlideRender} value={this.state.value}/>
           </header>
           <div>
             <PaymentList payment={filteredPayment}/>
             <Cards />
+            <List />
           </div>
         </div>
       </Fragment>
