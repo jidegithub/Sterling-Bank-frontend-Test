@@ -7,7 +7,7 @@ const Card = (props) => {
     return (
         <Fragment>
                 <div className='card'>
-                    <div className='card-image'> <ImageUpload/></div>
+                    <div className='card-image'> <ImageUpload /></div>
                     <div className="flex space-around">
                         <p className='card-currency'>{props.currency} <span className='card-value'>{props.value}</span></p>
                         <div className='card-name flex'>

@@ -40,18 +40,15 @@ class List extends Component {
   render() {    
     const brochure = this.state.brochure.map((item, index) => {
       return (
-        <tr key={index}>
-        <tr>
-            <td>{item.title}</td>
-            <td>{item.msg}</td>
-        </tr>
-          
-          <tr>
-            <td><button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}>edit</button> {" "}</td>
-           <td><button className="btn btn-danger" onClick={() => this.deleteItem(index)}>remove</button></td> 
-          </tr>
-        </tr>
+        <main key={index}>
+        
+            <div>{item.title}</div>
+            <div>{item.msg}</div>
+        
+            <span><button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+              onClick={() => this.replaceModalItem(index)}>edit</button> {" "}</span>
+           <span><button className="btn btn-danger" onClick={() => this.deleteItem(index)}>remove</button></span> 
+        </main>
       )
     });
     
@@ -59,14 +56,14 @@ class List extends Component {
     let modalData = this.state.brochure[requiredItem];
     return (
       <div>
-        <div style={{ textAlign: "left" }}>
+        {/* <div style={{ textAlign: "left" }}>
           <h4>comment</h4>
-        </div>
-        <table className="table table-striped">
-          <tbody>
+        </div> */}
+        <div className="comment-box">
+          <div className="comment">
             {brochure}
-          </tbody>
-        </table>
+          </div>
+        </div>
         <Modal
           title={modalData.title}
           msg={modalData.msg}
