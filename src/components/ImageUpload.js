@@ -42,7 +42,7 @@ const ImageUpload = ({id}) => {
           <label htmlFor='customFile' >
             <i className="far fa-images"></i>
           </label>
-           {/* {filename}  */}
+           {filename} 
         </div>    
         <button type='submit' id="submit-image" value="1"><i className="far fa-check-circle"></i></button>
       </form>
