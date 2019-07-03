@@ -12,7 +12,7 @@ class List extends Component {
       brochure: [
         {
           title: "Payment comment",
-          msg: "24k Bracelet"
+          msg: "make payment on the 3rd of march"
         }
       ]
     }
@@ -42,12 +42,14 @@ class List extends Component {
       return (
         <main key={index}>
         
-            <div>{item.title}</div>
+            <div><b>{item.title}</b></div>
             <div>{item.msg}</div>
-        
-            <span><button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}><i className="far fa-edit"></i></button> {" "}</span>
-           <span><button className="btn btn-danger" onClick={() => this.deleteItem(index)}><i className="far fa-trash-alt"></i></button></span> 
+            <div className="flex space-evenly">
+              <span><button className="btn trash-btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                  onClick={() => this.replaceModalItem(index)}><i className="far fa-edit"></i></button> {" "}</span>
+              <span><button className="btn trash-btn btn-danger" onClick={() => this.deleteItem(index)}><i className="far fa-trash-alt"></i></button></span> 
+            </div>
+           
         </main>
       )
     });
