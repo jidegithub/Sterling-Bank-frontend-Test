@@ -116,8 +116,9 @@ input[type='submit'] {
   left:-1px;
   font-size:32px;
 }
-&-images{
+&-folder-plus{
   font-size:30px;
+  color:$color-primary;
 }
 &-comment-dots{
   font-size:32px;
@@ -300,10 +301,11 @@ COMMENT
 
 main{
     border: 1px solid black;
-    width: 15vw;
+    width: 30vw;
     height: auto;
     margin-right:37px;
     background-color:white;
+    padding:5px;
 }
 
 .far{

@@ -6,7 +6,7 @@ import Comment from './Comment'
 const Card = (props) => {
     return ( 
         <Fragment>
-            <div className = 'card dib grow' style={{paddingRight: '42px'}}>
+            <div className = 'card mt2 ph1' style={{paddingRight: '42px'}}>
                 <div className = "flex space-around" >
                     <div className = 'card-currency' > {props.currency} < div className = 'card-value' > {props.value} </div></div >
                     <div className = 'card-name flex' >
@@ -15,7 +15,7 @@ const Card = (props) => {
                     </div> 
                 </div> 
                 <div className="embediv">
-                    <div className = 'card-comment'>
+                    <div className = 'card-comment hover-dark-blue'>
                         <Comment />
                     </div> 
                     <div className = 'card-image'>

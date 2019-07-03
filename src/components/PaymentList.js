@@ -9,7 +9,7 @@ const PaymentList = (props) =>{
     return(
         <Fragment>
             <div className='grid'>
-                {props.payment.map((payments, index) => {
+                {props.payment.map(function(payments, index){
                     sessionStorage.setItem('valueinStorage', payments.id);
                     return(
                       <Cards

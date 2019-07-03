@@ -40,7 +40,7 @@ const ImageUpload = ({id}) => {
         <div>
           <input style={{display:'none'}} type='file' id='customFile' onChange={onChange} />
           <label htmlFor='customFile' >
-            <i className="far fa-images"></i>
+            <i className="fas fa-folder-plus"></i>
           </label>
            {/* {filename}  */}
         </div>    
