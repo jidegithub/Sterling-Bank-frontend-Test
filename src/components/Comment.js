@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import List from './List'
+import List from './List'
 
 class Comment extends Component {
     state = {
@@ -15,8 +15,8 @@ class Comment extends Component {
     render() {
         return (
             <div>
-                {this.state.on && (<h5>toggle me </h5>)}
-              <button onClick={this.toggle}>show/hide</button>  
+                {this.state.on && (<List />)}
+              <i onClick={this.toggle} className="far fa-comment-dots"></i> 
             </div>
         );
     }

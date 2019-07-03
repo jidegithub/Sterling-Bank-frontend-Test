@@ -38,12 +38,12 @@ class Modal extends Component {
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Edit comment</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true"><i className="far fa-times-circle"></i></span>
                             </button>
                         </div>
                         <div className="modal-body">
                             <p><span className="modal-lable">Title:</span><input value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p>
-                            <p><span className="modal-lable">Msg:</span><input value={this.state.msg} onChange={(e) => this.msgHandler(e)} /></p>
+                            <p><span className="modal-lable">Msg:</span><textarea value={this.state.msg} onChange={(e) => this.msgHandler(e)} /></p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

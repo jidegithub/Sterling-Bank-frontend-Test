@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 
-const FileUpload = ({id}) => {
+const ImageUpload = ({id}) => {
   const [file, setFile] = useState('');
   const [filename, setFilename] = useState('Choose File');
   const [uploadedFile, setUploadedFile] = useState({});
@@ -16,10 +16,10 @@ const FileUpload = ({id}) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-    console.group(formData.entries)
+    //console.group(formData.entries)
 
     try {
-      const res = await axios.post('/{id}/receipts', formData, {
+      const res = await axios.post(`http://localhost:3000/payments/${id}/receipts`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -38,25 +38,19 @@ const FileUpload = ({id}) => {
     <Fragment>
       <form onSubmit={onSubmit}>
         <div>
-          <input
-            type='file'
-            id='customFile'
-            onChange={onChange}
-          />
-          <label htmlFor='customFile'>
-            {filename}
+          <input style={{display:'none'}} type='file' id='customFile' onChange={onChange} />
+          <label htmlFor='customFile' >
+            <i className="far fa-images"></i>
           </label>
+           {/* {filename}  */}
         </div>    
-        <input
-          type='submit'
-          value='Upload'
-        /><i className='fab fa-react'></i>
+        <button type='submit' id="submit-image" value="1"><i className="far fa-check-circle"></i></button>
       </form>
       {uploadedFile ? (
         <div>
           <div>
             <h3 className='text-center'>{uploadedFile.fileName}</h3>
-            <img style={{ width: '100%' }} src={uploadedFile.filePath} alt='' />
+            <img style={{ width: '20%' }} src={uploadedFile.filePath} alt='' />
           </div>
         </div>
       ) : null}
@@ -64,7 +58,7 @@ const FileUpload = ({id}) => {
   );
 };
 
-export default FileUpload;
+export default ImageUpload;
 
 
 

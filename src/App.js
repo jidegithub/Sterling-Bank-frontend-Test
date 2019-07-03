@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Slider from './components/Slider'
 import PaymentList from './components/PaymentList'
-import Cards from './components/Cards'
-import List from './components/List'
+//import List from './components/List'
 import 'jquery/src/jquery';
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -29,17 +28,27 @@ class App extends Component {
 
   componentDidMount() {
     axios.get(`http://localhost:3000/payments?limit=160`).then(payment=>{
-        console.log((payment.data.payments))
+        //console.log((payment.data.payments))
     this.setState({payments: payment.data.payments});
     });
   }
 
-  
-  removeImage = id => {
-    this.setState({
-      images: this.state.images.filter(image => image.public_id !== id)
-    })
+  componentDidUpdate() {
+    axios.get(`http://localhost:3000/payments?limit=160`).then(id=>{
+        console.log(id)
+    });
+
+    const selectedCard = (id) => {
+      console.log('hi')
+    }
   }
+
+  
+  // removeImage = id => {
+  //   this.setState({
+  //     images: this.state.images.filter(image => image.public_id !== id)
+  //   })
+  // }
 
   render() {
     const  filteredPayment = this.state.payments.filter(money=>{
@@ -48,16 +57,17 @@ class App extends Component {
      
     return (
       <Fragment>
-        <div>
-          <header className="App-header">
-            <Slider slideRender={this.onSlideRender} value={this.state.value}/>
-          </header>
+      <div styles={{margin:'0, auto'}}>
           <div>
-            <PaymentList payment={filteredPayment}/>
-            <Cards />
-            <List />
+            <header className="App-header">
+              <Slider slideRender={this.onSlideRender} value={this.state.value}/>
+            </header>
+            <div>
+              <PaymentList payment={filteredPayment} onClick={selectedCard}/>
+            </div>
           </div>
-        </div>
+      </div>
+          
       </Fragment>
       
     );

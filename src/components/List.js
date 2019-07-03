@@ -46,8 +46,8 @@ class List extends Component {
             <div>{item.msg}</div>
         
             <span><button className="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-              onClick={() => this.replaceModalItem(index)}>edit</button> {" "}</span>
-           <span><button className="btn btn-danger" onClick={() => this.deleteItem(index)}>remove</button></span> 
+              onClick={() => this.replaceModalItem(index)}><i className="far fa-edit"></i></button> {" "}</span>
+           <span><button className="btn btn-danger" onClick={() => this.deleteItem(index)}><i className="far fa-trash-alt"></i></button></span> 
         </main>
       )
     });
