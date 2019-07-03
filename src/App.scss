@@ -301,7 +301,7 @@ COMMENT
 
 main{
     border: 1px solid black;
-    width: 30vw;
+    width: auto;
     height: auto;
     margin-right:37px;
     background-color:white;
@@ -353,7 +353,8 @@ main{
 
 
 .modal-dialog {
-  width:50px!important;
+  width:250px!important;
+  margin:0 auto;
 }
 
 
