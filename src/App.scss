@@ -109,20 +109,32 @@ input[type='submit'] {
   width:30px;
   height:30px;
 }
-.fa-check-circle{
+.fa{
+&-check-circle{
   position:absolute;
   bottom:41px;
   left:-1px;
   font-size:32px;
 }
-
-.fa-images{
+&-images{
   font-size:30px;
 }
-
-.fa-comment-dots{
+&-comment-dots{
   font-size:32px;
 }
+&-trash-alt{
+color:white!important;
+}
+&-edit{
+color:white!important;
+}
+&-times-circle{
+  color:red!important;
+  font-weight:bolder;
+}
+}
+
+
 
 .embed{
   color:$color-primary;
@@ -321,6 +333,11 @@ input[type=range]::-moz-range-track {
   body{
     padding:0;
   }
+}
+
+
+.modal-dialog {
+  width:50px!important;
 }
 
 

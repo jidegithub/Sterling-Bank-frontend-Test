@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import Slider from './components/Slider'
 import PaymentList from './components/PaymentList'
-//import List from './components/List'
+import List from './components/List'
+import Scrollbar from './components/Scrollbar';
 import 'jquery/src/jquery';
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
@@ -18,7 +19,8 @@ class App extends Component {
       value:0,
       uploading: false,
       images: [],
-      selectedFile:null
+      selectedFile:null,
+      id:[]
     };
   }
 
@@ -28,19 +30,18 @@ class App extends Component {
 
   componentDidMount() {
     axios.get(`http://localhost:3000/payments?limit=160`).then(payment=>{
-        //console.log((payment.data.payments))
-    this.setState({payments: payment.data.payments});
+      console.log((payment.data.payments))
+      this.setState({payments: payment.data.payments});
+    });
+
+    axios.get(`http://localhost:3000/payments?limit=160`).then(id=>{
+      console.log((id.data.payments[0].id))
+      this.setState({id: id.data.payments.id});
     });
   }
 
-  componentDidUpdate() {
-    axios.get(`http://localhost:3000/payments?limit=160`).then(id=>{
-        console.log(id)
-    });
-
-    const selectedCard = (id) => {
-      console.log('hi')
-    }
+  onClick = () =>{
+    alert('test')
   }
 
   
@@ -63,10 +64,13 @@ class App extends Component {
               <Slider slideRender={this.onSlideRender} value={this.state.value}/>
             </header>
             <div>
-              <PaymentList payment={filteredPayment} onClick={selectedCard}/>
+              <Scrollbar>
+                <PaymentList payment={filteredPayment} forid={this.onClick}/>
+              </Scrollbar>  
             </div>
           </div>
       </div>
+      <List />
           
       </Fragment>
       
