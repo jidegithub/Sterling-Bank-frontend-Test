@@ -42,7 +42,7 @@ const ImageUpload = ({id}) => {
           <label htmlFor='customFile' >
             <i className="fas fa-folder-plus"></i>
           </label>
-           {/* {filename}  */}
+          <span className='fileName'> {filename}</span>
         </div>    
         <button type='submit' id="submit-image" value="1"><i className="far fa-check-circle"></i></button>
       </form>
@@ -59,6 +59,11 @@ const ImageUpload = ({id}) => {
 };
 
 export default ImageUpload;
+
+
+
+// {filename}
+//<span className='fileName'> {filename ? <div className="rect">Select File First and submit</div> : "null"}</span>
 
 
 

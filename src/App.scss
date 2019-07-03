@@ -119,6 +119,7 @@ input[type='submit'] {
 &-folder-plus{
   font-size:30px;
   color:$color-primary;
+  cursor: pointer;
 }
 &-comment-dots{
   font-size:32px;
@@ -133,6 +134,12 @@ color:white!important;
   color:red!important;
   font-weight:bolder;
 }
+}
+
+.rect{
+  border:1px solid black;
+  padding:2px 4px;
+  background-color: #eea47fff;
 }
 
 .trash-btn{
@@ -311,6 +318,18 @@ main{
 .far{
   cursor: pointer;
   color:$color-primary;
+}
+
+.fileName{
+  position:absolute;
+  left:-350px;
+  bottom:47px;
+  color:#00539cff;
+  font-weight: 700;
+}
+
+button{
+  outline:none;
 }
 
 //1160
