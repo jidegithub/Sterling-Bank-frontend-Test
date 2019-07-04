@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Modal from './Modal.js';
+import Modal from './Modal';
 
 class List extends Component {
   constructor(props) {
     super(props);
 
-    this.replaceModalItem = this.replaceModalItem.bind(this);
-    this.saveModalDetails = this.saveModalDetails.bind(this);
+    // this.replaceModalItem = this.replaceModalItem.bind(this);
+    // this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
       brochure: [
@@ -18,13 +18,13 @@ class List extends Component {
     }
   }
 
-  replaceModalItem(index) {
+  replaceModalItem = (index)=> {
     this.setState({
       requiredItem: index
     });
   }
 
-  saveModalDetails(item) {
+  saveModalDetails = (item)=> {
     const requiredItem = this.state.requiredItem;
     let tempbrochure = this.state.brochure;
     tempbrochure[requiredItem] = item;

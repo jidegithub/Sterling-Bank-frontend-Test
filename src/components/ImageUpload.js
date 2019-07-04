@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import {id} from './PaymentList';
 import axios from 'axios';
 
 // const idInStorage = ({id}) =>{
 //   let id =  JSON.parse(sessionStorage.getItem('valueinStorage'))
 //   return id; 
 // }
-
 
 
 const ImageUpload = (id) => {

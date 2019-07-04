@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Slider from './components/Slider'
 import PaymentList from './components/PaymentList'
-import List from './components/List'
 import Scrollbar from './components/Scrollbar';
 import 'jquery/src/jquery';
 import 'popper.js/dist/popper.min.js';
@@ -10,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
+import './Animate.css';
 
 class App extends Component {
   constructor(props) {
