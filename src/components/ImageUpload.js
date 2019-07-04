@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 // const idInStorage = ({id}) =>{
@@ -42,7 +42,7 @@ const ImageUpload = (id) => {
     };
 
   return (
-    <Fragment>
+    <>
       <form onSubmit={onSubmit}>
         <div>
           <input style={{display:'none'}} type='file' id='customFile' onChange={onChange} />
@@ -61,7 +61,7 @@ const ImageUpload = (id) => {
           </div>
         </div>
       ) : null}
-    </Fragment>
+    </>
   );
 };
 

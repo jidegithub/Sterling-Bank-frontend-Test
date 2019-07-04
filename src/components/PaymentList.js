@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Cards from './Cards';
 
 
@@ -8,7 +8,7 @@ const PaymentList = (props) =>{
     }  
       
     return(
-        <Fragment>
+        <>
             <div onClick={props.click} className='grid'>
                 {props.payment.map((payments, index)=>{
                     sessionStorage.setItem('valueinStorage', payments.id);
@@ -30,7 +30,7 @@ const PaymentList = (props) =>{
                     
                 })}    
             </div>
-        </Fragment>
+        </>
     )  
 }
 

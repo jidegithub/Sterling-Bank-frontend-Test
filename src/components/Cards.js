@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import ImageUpload from './ImageUpload'
 import Comment from './Comment'
 
 
 const Card = (props) => {
     return ( 
-        <Fragment>
+        <>
             <div className = 'card mt2 ph1' style={{paddingRight: '42px'}}>
                 <div className = "flex space-around" >
                     <div className = 'card-currency' > {props.currency} < div className = 'card-value' > {props.value} </div></div >
@@ -28,7 +28,7 @@ const Card = (props) => {
                     <p className = 'card-date' > {props.date}</p> 
                 </div> 
             </div>   
-        </Fragment>  
+        </>  
     );
 }
 

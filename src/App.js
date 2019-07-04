@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 import Slider from './components/Slider'
 import PaymentList from './components/PaymentList'
@@ -54,23 +54,20 @@ class App extends Component {
 
      
     return (
-      <Fragment>
-      <div styles={{margin:'0, auto'}}>
-          <div>
-            <header className="App-header">
-              <Slider slideRender={this.onSlideRender} value={this.state.value}/>
-            </header>
+      <>
+        <div styles={{margin:'0, auto'}}>
             <div>
-              <Scrollbar>
-                <PaymentList payment={filteredPayment} click={this.onClick}/>
-              </Scrollbar>  
+              <header className="App-header">
+                <Slider slideRender={this.onSlideRender} value={this.state.value}/>
+              </header>
+              <div>
+                <Scrollbar>
+                  <PaymentList payment={filteredPayment} click={this.onClick}/>
+                </Scrollbar>  
+              </div>
             </div>
-          </div>
-      </div>
-      <List />
-          
-      </Fragment>
-      
+        </div>     
+      </> 
     );
   }
 }
