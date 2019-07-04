@@ -11,7 +11,7 @@ class List extends Component {
       requiredItem: 0,
       brochure: [
         {
-          title: "Payment comment",
+          title: "comment title",
           msg: "make payment on the 3rd of march"
         }
       ]

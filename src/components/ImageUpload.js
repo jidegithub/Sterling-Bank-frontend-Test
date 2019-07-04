@@ -1,7 +1,14 @@
 import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 
-const ImageUpload = ({id}) => {
+// const idInStorage = ({id}) =>{
+//   let id =  JSON.parse(sessionStorage.getItem('valueinStorage'))
+//   return id; 
+// }
+
+
+
+const ImageUpload = (id) => {
   const [file, setFile] = useState('');
   const [filename, setFilename] = useState('Choose File');
   const [uploadedFile, setUploadedFile] = useState({});
@@ -16,7 +23,7 @@ const ImageUpload = ({id}) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('file', file);
-    //console.group(formData.entries)
+    // console.log(formData.entries, idInStorage)
 
     try {
       const res = await axios.post(`http://localhost:3000/payments/${id}/receipts`, formData, {

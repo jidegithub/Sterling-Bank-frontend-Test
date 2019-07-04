@@ -33,16 +33,11 @@ class App extends Component {
       console.log((payment.data.payments))
       this.setState({payments: payment.data.payments});
     });
-
-    axios.get(`http://localhost:3000/payments?limit=160`).then(id=>{
-      console.log((id.data.payments[0].id))
-      this.setState({id: id.data.payments.id});
-    });
   }
 
-  onClick = () =>{
-    alert('test')
-  }
+  // onClick = (event) => {
+  //   alert(event.target.id)
+  // }
 
   
   // removeImage = id => {
@@ -55,6 +50,8 @@ class App extends Component {
     const  filteredPayment = this.state.payments.filter(money=>{
       return parseInt(money.amount.value) > 0 && parseInt(money.amount.value) <= this.state.value
      })
+
+
      
     return (
       <Fragment>
@@ -65,7 +62,7 @@ class App extends Component {
             </header>
             <div>
               <Scrollbar>
-                <PaymentList payment={filteredPayment} forid={this.onClick}/>
+                <PaymentList payment={filteredPayment} click={this.onClick}/>
               </Scrollbar>  
             </div>
           </div>
