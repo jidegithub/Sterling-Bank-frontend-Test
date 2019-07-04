@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Modal extends Component {
     constructor(props) {
@@ -28,8 +29,18 @@ class Modal extends Component {
     handleSave() {
         const item = this.state;
         this.props.saveModalDetails(item)
-    }
+        const commentToPost = (item.msg)
 
+        axios.put("http://localhost:3000/payments/5b996064dfd5b783915112f5/",{
+                "comment": commentToPost   
+                })
+        .then(res=>{
+                console.log(res)
+            })
+            .catch()
+              console.log('an error occured') 
+            }      
+    
     render() {
         return (
             <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
