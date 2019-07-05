@@ -22,11 +22,15 @@ const ImageUpload = (id) => {
   const onSubmit = async e => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('file', file);
-    // console.log(formData.entries, idInStorage)
+    formData.append('id', file);
+    console.log(formData.entries)
 
     try {
-      const res = await axios.post(`http://localhost:3000/payments/${id}/receipts`, formData, {
+      const res = await axios.post("http://localhost:3000/payments/5b996064dfd5b783915112f5/", 
+       {
+        "receipts": [formData]   
+        },
+         {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

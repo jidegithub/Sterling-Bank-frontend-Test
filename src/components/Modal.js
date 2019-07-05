@@ -4,7 +4,7 @@ import axios from 'axios';
 class Modal extends Component {
     constructor(props) {
         super(props);
-        this.handleSave = this.handleSave.bind(this);
+        //this.handleSave = this.handleSave.bind(this);
         this.state = {
             title: '',
             msg: '',
@@ -26,7 +26,7 @@ class Modal extends Component {
         this.setState({ msg: e.target.value });
     }
 
-    handleSave() {
+    handleSave = () => {
         const item = this.state;
         this.props.saveModalDetails(item)
         const commentToPost = (item.msg)
@@ -38,8 +38,7 @@ class Modal extends Component {
                 console.log(res)
             })
             .catch()
-              console.log('an error occured') 
-            }      
+        }      
     
     render() {
         return (

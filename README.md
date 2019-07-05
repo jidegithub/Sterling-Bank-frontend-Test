@@ -1,6 +1,6 @@
 # Brief Project Description
 
-It was nice working on this project. It has taken me about 4 days to submit this though i am still working on it (Better than nothing) as I had difficulty making POST and PUT request to the server.
+It was nice working on this project. It has taken me about 4 days to submit this though i am still working on it (Better than nothing) as I had difficulty making a POST request of the image to the server.
 Hardest part to implement? Not sure I will use the word "hard" but basically the comment edit side note and modal.
 Functionalities I'm proud of? Probably the Range Slider. I do hope you like what I have done.
 
