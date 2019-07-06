@@ -27,7 +27,7 @@ const Card = (props) => {
                     <p className = 'card-merchant' > {props.merchant } </p> 
                     <p className = 'card-date' > {props.date}</p> 
                 </div> 
-                <div style={{marginTop: '29px'}}> {props.id}</div>
+                {/* <div style={{marginTop: '29px'}}> {props.id}</div> */}
             </div>   
         </>  
     );
