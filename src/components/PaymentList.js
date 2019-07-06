@@ -16,7 +16,8 @@ const PaymentList = (props) =>{
                     return(
                             <Cards
                                 onClick={handleId(payments.id)}
-                                key={payments.id} 
+                                key={payments.id}
+                                id={payments.id}  
                                 value={payments.amount.value}
                                 currency={payments.amount.currency}
                                 date={payments.date}

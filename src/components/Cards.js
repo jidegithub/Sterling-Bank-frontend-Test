@@ -6,7 +6,7 @@ import Comment from './Comment'
 const Card = (props) => {
     return ( 
         <>
-            <div className = 'card mt2 ph1' style={{paddingRight: '42px'}}>
+            <div className = 'card mt2 ph1 fadeIn data-wow-duration="1000ms" data-wow-delay="300ms"' style={{paddingRight: '42px'}}>
                 <div className = "flex space-around" >
                     <div className = 'card-currency' > {props.currency} < div className = 'card-value' > {props.value} </div></div >
                     <div className = 'card-name flex' >
@@ -27,6 +27,7 @@ const Card = (props) => {
                     <p className = 'card-merchant' > {props.merchant } </p> 
                     <p className = 'card-date' > {props.date}</p> 
                 </div> 
+                <div style={{marginTop: '29px'}}> {props.id}</div>
             </div>   
         </>  
     );

@@ -6,6 +6,7 @@ import Scrollbar from './components/Scrollbar';
 import 'jquery/src/jquery';
 import 'popper.js/dist/popper.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
+
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
@@ -29,7 +30,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/payments?limit=160`).then(payment=>{
+    axios.get(`http://localhost:3000/payments?limit=168`).then(payment=>{
       console.log((payment.data.payments))
       this.setState({payments: payment.data.payments});
     });
@@ -58,6 +59,7 @@ class App extends Component {
         <div styles={{margin:'0, auto'}}>
             <div>
               <header className="App-header">
+              <p>move slider to display filtered list</p>
                 <Slider slideRender={this.onSlideRender} value={this.state.value}/>
               </header>
               <div>
