@@ -69,6 +69,7 @@ class List extends Component {
         <Modal
           title={modalData.title}
           msg={modalData.msg}
+          id={this.props.id}
           saveModalDetails={this.saveModalDetails}
         />
       </div>

@@ -103,6 +103,7 @@ input[type='submit'] {
 }
 #submit-image{
   border-radius:50%;
+  // border-radius:10px;
   width:30px;
   height:30px;
 }
@@ -365,6 +366,12 @@ button{
 .modal-dialog {
   width:250px!important;
   margin:0 auto;
+}
+.modal-backdrop {
+  z-index: 199 !important;
+}
+.card-comment {
+  z-index: 200 !important;
 }
 
 

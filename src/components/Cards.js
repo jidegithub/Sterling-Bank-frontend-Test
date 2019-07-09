@@ -8,18 +8,19 @@ const Card = (props) => {
         <>
             <div className = 'card mt2 ph1 fadeIn data-wow-duration="1000ms" data-wow-delay="300ms"' style={{paddingRight: '42px'}}>
                 <div className = "flex space-around" >
-                    <div className = 'card-currency' > {props.currency} < div className = 'card-value' > {props.value} </div></div >
+                    <div className = 'card-currency' > {props.currency}  {props.value} </div>
                     <div className = 'card-name flex' >
                         <p className = 'card-firstName mL-12' > {props.firstName} </p>  
                         <p className = 'card-lastName'>{props.lastName} </p> 
                     </div> 
                 </div> 
                 <div className="embediv">
-                    <div className = 'card-comment hover-dark-blue'>
-                        <Comment />
+                    <div className = 'card-comment'>
+                        <Comment  id={props.id} />
                     </div> 
                     <div className = 'card-image'>
-                        <ImageUpload /> 
+                        {/* props.id needed to make the request dynamic */}
+                        <ImageUpload id={props.id} /> 
                     </div>
                 </div>
                  

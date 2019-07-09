@@ -57,6 +57,7 @@ router.put('/:id', (req, res) => {
 })
 
 router.post('/:id/receipts', (req, res) => {
+  console.log('req files', req.files)
   if (!req.files) {
     return res.status(400).send('No files were uploaded.');
   }
@@ -64,8 +65,14 @@ router.post('/:id/receipts', (req, res) => {
   const id = req.params.id
   const payment = payments.find((payment) => payment.id === id)
 
+  console.log('payment', payment)
+
   if (payment) {
-    const receipt = req.files.receipt as UploadedFile
+    // const receipt = req.files.receipt as UploadedFile
+    const receipt = req.files.files as UploadedFile
+    
+    console.log('receipt', receipt)
+
     const receiptId = `${id}-${payment.receipts.length}`
     receipt.mv(`${process.cwd()}/receipts/${receiptId}`, (err) => {
       if (err) {

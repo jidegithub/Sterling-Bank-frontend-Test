@@ -11,7 +11,13 @@ class Modal extends Component {
         }
     }
 
+    
+    componentDidMount() {
+        console.log(this.props)
+    }
+
     componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
         this.setState({
             title: nextProps.title,
             msg: nextProps.msg,
@@ -28,17 +34,22 @@ class Modal extends Component {
 
     handleSave = () => {
         const item = this.state;
-        this.props.saveModalDetails(item)
-        const commentToPost = (item.msg)
+        // this.props.saveModalDetails(item)
+        let {msg, title} = this.state
+        let data = {
+            title,
+            msg
+        }
+        // const commentToPost = (item.msg)
 
-        axios.put("http://localhost:3000/payments/5b996064dfd5b783915112f5/",{
-                "comment": commentToPost   
-                })
+        axios.put(`http://localhost:3000/payments/${this.props.id}`,{
+            "comment": data   
+        })
         .then(res=>{
                 console.log(res)
-            })
-            .catch()
-        }      
+        })
+        .catch()
+    }   
     
     render() {
         return (

@@ -8,15 +8,15 @@ class Comment extends Component {
 
     toggle = () => {
         this.setState({
-            on:!this.state.on
+            on: !this.state.on
         })
     }
 
     render() {
         return (
             <div>
-                {this.state.on && (<List />)}
-              <i onClick={this.toggle} className="far fa-comment-dots"></i> 
+                {this.state.on && (<List id={this.props.id} />)}
+                <i onClick={this.toggle} className="far fa-comment-dots"></i> 
             </div>
         );
     }

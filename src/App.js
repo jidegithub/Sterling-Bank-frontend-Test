@@ -30,10 +30,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/payments?limit=168`).then(payment=>{
-      console.log((payment.data.payments))
-      this.setState({payments: payment.data.payments});
-    });
+    axios.get(`http://localhost:3000/payments?limit=168`)
+      .then(payment=>{
+        console.log((payment.data.payments))
+        this.setState({payments: payment.data.payments});
+      }
+    );
   }
 
   // onClick = (event) => {

@@ -4,7 +4,7 @@ import Cards from './Cards';
 
 const PaymentList = (props) =>{
     const handleId = () =>{
-        console.log(sessionStorage.getItem('valueinStorage'))
+        // console.log(sessionStorage.getItem('valueinStorage'))
     }  
       
     return(
