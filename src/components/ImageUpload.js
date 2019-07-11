@@ -62,20 +62,30 @@ export default function ImageUpload(props) {
       <>
         <form onSubmit={onSubmit} 
                                   style={{
-                                    position: 'absolute',
-                                    top: '-59px',
-                                    left: '-95px'
+                                    marginLeft: '-146px',
+                                    marginBottom: '40px'
                                   }}
                                   >
           <div style={{height: '30px'}}>
-            {/* <span className='fileName'> {filename}</span> */}
-            <input type='file' style={{    width: '32px', position: 'relative', top: 0, opacity: 0, zIndex: 100 }} id='customFile' onChange={onChange} />
-            <label htmlFor='customFile' style={{position: 'relative', top: '-25px'}} >
-              <i className="fas fa-folder-plus"></i>
-            </label>
+            <div class="file has-name is-right file is-info has-name">
+              <label class="file-label">
+                <input class="file-input" type="file" name="resume" id='customFile' onChange={onChange}/>
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Choose a file…
+                  </span>
+                </span>
+                <span class="file-name">
+                  {filename}
+                </span>
+              </label>
+            </div>
           </div>    
-          <button type='submit' id="submit-image">
-            <i className="far fa-check-circle" style={{ marginBottom: '-40px' }}></i>
+          <button type='submit' id="submit-image" className='margL button is-medium button is-link' defaultValue='submit'>
+           Submit
           </button>
         </form>
         {uploadedFile ? (
