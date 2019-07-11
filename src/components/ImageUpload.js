@@ -63,12 +63,12 @@ export default function ImageUpload(props) {
         <form onSubmit={onSubmit} 
                                   style={{
                                     marginLeft: '-146px',
-                                    marginBottom: '40px'
+                                    marginBottom: '25px'
                                   }}
                                   >
-          <div style={{height: '30px'}}>
+          <div>
             <div class="file has-name is-right file is-info has-name">
-              <label class="file-label">
+              <label class="file-label margR">
                 <input class="file-input" type="file" name="resume" id='customFile' onChange={onChange}/>
                 <span class="file-cta">
                   <span class="file-icon">
@@ -95,7 +95,7 @@ export default function ImageUpload(props) {
             {/* <span className='text-center' style={{fontSize: '10px'}}>{uploadedFile.id}</span> */}
             {
               uploadedFile.receipts ? 
-                uploadedFile.receipts.map(reciept => <img style={{ height: '30px', margin: '3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
+                uploadedFile.receipts.map(reciept => <img style={{ height: '30px', margin: '0px 3px 3px 3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
             }
           </div>
         ) : null}
