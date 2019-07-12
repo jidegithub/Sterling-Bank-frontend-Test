@@ -4,7 +4,6 @@ import axios from 'axios';
 class Modal extends Component {
     constructor(props) {
         super(props);
-        //this.handleSave = this.handleSave.bind(this);
         this.state = {
             title: '',
             msg: '',
@@ -59,12 +58,17 @@ class Modal extends Component {
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">Edit comment</h5>
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true"><i className="far fa-times-circle"></i></span>
+                                <span aria-hidden="true" style={{position: 'relative',bottom: '18px'}}>&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <p><span className="modal-lable">Title:</span><input value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p>
-                            <p><span className="modal-lable">Msg:</span><textarea value={this.state.msg} onChange={(e) => this.msgHandler(e)} /></p>
+                            {/* <p><span className="modal-label">Title:</span><input value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p> */}
+                            <form>
+                                <div className='form-group'>
+                                    <label for="exampleFormControlTextarea1">Message</label>
+                                    <textarea className="form-control" id="exampleFormControlTextarea1" row="3" value={this.state.msg} onChange={(e) => this.msgHandler(e)} />
+                                </div>  
+                            </form> 
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

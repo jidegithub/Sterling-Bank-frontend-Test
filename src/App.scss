@@ -73,7 +73,7 @@ body{
     position:absolute;
     right:17px;
     top:15px;
-    z-index: 1000;
+    z-index: 220;
   }
   // &-button{
   //   position:absolute;
@@ -131,6 +131,9 @@ color:white!important;
   color:red!important;
   font-weight:bolder;
 }
+}
+.far .fa-comment-dots{
+  z-index: 300!important;
 }
 
 .rect{
@@ -396,16 +399,15 @@ button{
 }
 
 //MODAL
-.modal-dialog {
-  width:250px!important;
-  margin:0 auto;
+.modal-card,
+.modal-content {
+  margin: 0 0!important;
 }
+
 .modal-backdrop {
-  z-index: 199 !important;
+  z-index:200!important;
 }
-.card-comment {
-  z-index: 200 !important;
-}
+
 
 
 
