@@ -43,8 +43,6 @@ body{
   border:1px solid black;
   background: linear-gradient(to right bottom,#00022e, #00022edb),url('./curve2.jpg');
   position:relative;
-  // background: linear-gradient(to right, #d0f0e0, #e8f0e0),url('./curve2.jpg');
-  // linear-gradient(135deg,#009ffd,#2a2a72 98%);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 2px;
@@ -133,7 +131,8 @@ color:white!important;
 }
 }
 .far .fa-comment-dots{
-  z-index: 300!important;
+
+  transform:none!important;
 }
 
 .rect{
@@ -313,9 +312,6 @@ main{
   left:-350px;
   bottom:47px;
   color:#00539cff;
-  // border: 1px solid cadetblue;
-  // border-radius:1px 8px 1px 8px;
-  // padding: 1px 3px;
 }
 
 button{
@@ -405,7 +401,7 @@ button{
 }
 
 .modal-backdrop {
-  z-index:200!important;
+  z-index:199!important;
 }
 
 

@@ -4,9 +4,6 @@ import Modal from './Modal';
 class List extends Component {
   constructor(props) {
     super(props);
-
-    // this.replaceModalItem = this.replaceModalItem.bind(this);
-    // this.saveModalDetails = this.saveModalDetails.bind(this);
     this.state = {
       requiredItem: 0,
       brochure: [
