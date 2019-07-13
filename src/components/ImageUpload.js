@@ -84,7 +84,7 @@ export default function ImageUpload(props) {
               </label>
             </div>
           </div>    
-          <button type='submit' id="submit-image" classNameName='margL button is-success is-outlined is-medium  is-link' defaultValue='submit'>
+          <button type='submit' id="submit-image" className='margL button is-info is-outlined is-medium' defaultValue='submit'>
            Submit
           </button>
         </form>
@@ -95,7 +95,7 @@ export default function ImageUpload(props) {
             {/* <span classNameName='text-center' style={{fontSize: '10px'}}>{uploadedFile.id}</span> */}
             {
               uploadedFile.receipts ? 
-                uploadedFile.receipts.map(reciept => <img style={{ height: '30px', margin: '0px 3px 3px 3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
+                uploadedFile.receipts.map(reciept => <img style={{ height: '30px', margin: '2px 3px 3px 3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
             }
           </div>
         ) : null}

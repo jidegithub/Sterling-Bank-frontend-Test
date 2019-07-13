@@ -65,7 +65,7 @@ class Modal extends Component {
                             {/* <p><span className="modal-label">Title:</span><input value={this.state.title} onChange={(e) => this.titleHandler(e)} /></p> */}
                             <form className="form-popup">
                                 <div className='form-group'>
-                                    <label Htmlfor="exampleFormControlTextarea1">Message</label>
+                                    <label htmlFor="exampleFormControlTextarea1">Message</label>
                                     <textarea className="form-control" id="exampleFormControlTextarea1" row="3" value={this.state.msg} onChange={(e) => this.msgHandler(e)} />
                                 </div>  
                             </form> 
