@@ -3,19 +3,14 @@ import Cards from './Cards';
 
 
 const PaymentList = (props) =>{
-    const handleId = () =>{
-        // console.log(sessionStorage.getItem('valueinStorage'))
-    }  
-      
+        
     return(
         <>
             <div onClick={props.click} className='grid'>
                 {props.payment.map((payments, index)=>{
-                    sessionStorage.setItem('valueinStorage', payments.id);
-
+                    
                     return(
                             <Cards
-                                onClick={handleId(payments.id)}
                                 key={payments.id}
                                 id={payments.id}  
                                 value={payments.amount.value}
@@ -26,7 +21,6 @@ const PaymentList = (props) =>{
                                 lastName={payments.user.last}
                                 email={payments.user.email}
                             />  
-                    
                     ) 
                     
                 })}    
@@ -34,7 +28,5 @@ const PaymentList = (props) =>{
         </>
     )  
 }
-
-
   
 export default PaymentList;

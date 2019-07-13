@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
-import './Animate.css';
+
 
 class App extends Component {
   constructor(props) {
