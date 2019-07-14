@@ -5,7 +5,12 @@ import Comment from './Comment';
 const Card = (props) => {
     return ( 
         <>
-            <div className = 'card mt2' style={{paddingRight: '60px'}}>
+            < div className = 'roll-in-blurred-left card mt2'
+            style = {
+                {
+                    paddingRight: '60px'
+                }
+            } >
                 <div className = "re-flex flex space-around" >
                     <div className = 'card-currency' > {props.currency}  {props.value} </div>
                     <div className = 'card-name flex' >
