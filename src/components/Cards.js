@@ -4,8 +4,8 @@ import Comment from './Comment';
 
 const Card = (props) => {
     return ( 
-        <>
-            < div className = 'roll-in-blurred-left card mt2'
+        <> 
+            < div className = 'card mt2'
             style = {
                 {
                     paddingRight: '60px'
