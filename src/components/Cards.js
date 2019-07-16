@@ -12,7 +12,7 @@ const Card = (props) => {
                 }
             } >
                 <div className = "re-flex flex space-around" >
-                    <div className = 'card-currency' > {props.currency}  {props.value} </div>
+                    <div className = 'roll-in-blurred-right card-currency' > {props.currency}  {props.value} </div>
                     <div className = 'card-name flex' >
                         <p className = 'card-firstName mL-12' > {props.firstName} </p>  
                         <p className = 'card-lastName'>{props.lastName} </p> 
@@ -22,7 +22,7 @@ const Card = (props) => {
                     <div className = 'card-comment'>
                         <Comment  id={props.id} />
                     </div> 
-                    <div className = 'card-image'>
+                    < div className = 'roll-in-blurred-left card-image' >
                         {/* props.id needed to make the request dynamic */}
                         <ImageUpload id={props.id} /> 
                     </div>

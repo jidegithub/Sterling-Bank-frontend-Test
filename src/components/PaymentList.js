@@ -11,7 +11,6 @@ const PaymentList = (props) =>{
                     
                     return(
                             <Cards
-                            className = "roll-in-blurred-left"
                                 key={payments.id}
                                 id={payments.id}  
                                 value={payments.amount.value}
