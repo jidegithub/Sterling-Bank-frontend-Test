@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from './Modal';
+import Icons from '../Icons'
 
 class List extends Component {
   constructor(props) {
@@ -43,8 +44,10 @@ class List extends Component {
             <div>{item.msg}</div>
             <div className="flex space-evenly">
               <span><button className="btn trash-btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                  onClick={() => this.replaceModalItem(index)}><i className="far fa-edit"></i></button> {" "}</span>
-              {/* <span><button className="btn trash-btn btn-danger" onClick={() => this.deleteItem(index)}><i className="far fa-trash-alt"></i></button></span>  */}
+                  onClick={() => this.replaceModalItem(index)}>
+                  <span className="far"><Icons name={"edit1"} color={"#ffffff"} size={100}/></span> 
+                  </button></span>
+              {/* <span><button className="btn trash-btn btn-danger" onClick={() => this.deleteItem(index)}><i className="far fa-trash-alt">delete</i></button></span>  */}
             </div>
            
         </main>

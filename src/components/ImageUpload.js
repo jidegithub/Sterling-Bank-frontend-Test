@@ -95,7 +95,7 @@ export default function ImageUpload(props) {
             {/* <span classNameName='text-center' style={{fontSize: '10px'}}>{uploadedFile.id}</span> */}
             {
               uploadedFile.receipts ? 
-                uploadedFile.receipts.map(reciept => <img style={{ height: '30px', margin: '2px 3px 3px 3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
+              uploadedFile.receipts.map((reciept, index) => <img key={index} style={{ height: '30px', margin: '2px 3px 3px 3px' }} src={`http://localhost:3000${reciept.url}`} alt='' />) : null
             }
           </div>
         ) : null}

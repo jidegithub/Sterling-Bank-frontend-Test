@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List'
+import Icons from '../Icons';
 
 class Comment extends Component {
     state = {
@@ -16,7 +17,7 @@ class Comment extends Component {
         return (
             <div>
                 {this.state.on && (<List id={this.props.id} />)}
-                <i onClick={this.toggle} className="far fa-comment-dots"></i> 
+                <span className="far" onClick={this.toggle}><Icons name={"chat-bubble-dots"} color={"#ffffff"} size={35}/></span> 
             </div>
         );
     }

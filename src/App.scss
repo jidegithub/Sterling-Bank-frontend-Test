@@ -159,8 +159,8 @@ color:white!important;
   font-weight:bolder;
 }
 }
-.far .fa-comment-dots{
-
+.far{
+  cursor: pointer;
   transform:none!important;
 }
 
@@ -329,11 +329,6 @@ main{
     margin-right:37px;
     background-color:white;
     padding:5px;
-}
-
-.far{
-  cursor: pointer;
-  color:$color-primary;
 }
 
 .fileName{
