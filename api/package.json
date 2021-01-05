@@ -11,7 +11,7 @@
     "lint": "prettier --write './**/*.{ts,tsx}' --config ./.prettierconfig"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "debug": "~2.6.9",
     "express": "^4.16.4",
     "express-fileupload": "^0.4.0",
